@@ -13,36 +13,36 @@ interface DynamicModuleLoaderProps {
 }
 
 export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
-    const {
-        children,
-        reducers,
-        removeAfterUnmount,
-    } = props;
+  const {
+    children,
+    reducers,
+    removeAfterUnmount,
+  } = props;
 
-    const store = useStore() as ReduxStoreWithManager;
-    const dispatch = useDispatch();
+  const store = useStore() as ReduxStoreWithManager;
+  const dispatch = useDispatch();
 
-    useEffect(() => {
+  useEffect(() => {
+    Object.entries(reducers).forEach(([name, reducer]) => {
+      store.reducerManager.add(name as StateSchemaKey, reducer);
+      dispatch({ type: `@INIT ${name} reducer` });
+    });
+
+    return () => {
+      if (removeAfterUnmount) {
         Object.entries(reducers).forEach(([name, reducer]) => {
-            store.reducerManager.add(name as StateSchemaKey, reducer);
-            dispatch({ type: `@INIT ${name} reducer` });
+          store.reducerManager.remove(name as StateSchemaKey);
+          dispatch({ type: `@DESTROY ${name} reducer` });
         });
-
-        return () => {
-            if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(([name, reducer]) => {
-                    store.reducerManager.remove(name as StateSchemaKey);
-                    dispatch({ type: `@DESTROY ${name} reducer` });
-                });
-            }
-        };
-        // eslint-disable-next-line
+      }
+    };
+    // eslint-disable-next-line
     }, []);
 
-    return (
+  return (
         // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {children}
         </>
-    );
+  );
 };

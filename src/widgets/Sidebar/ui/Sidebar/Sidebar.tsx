@@ -14,32 +14,32 @@ interface SidebarProps {
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
-    const onToggle = () => {
-        setCollapsed((prev) => !prev);
-    };
+  const onToggle = () => {
+    setCollapsed((prev) => !prev);
+  };
 
-    const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+  const itemsList = useMemo(() => SidebarItemsList.map((item) => (
         <SidebarItem
-            item={item}
-            collapsed={collapsed}
-            key={item.path}
+          item={item}
+          collapsed={collapsed}
+          key={item.path}
         />
-    )), [collapsed]);
+  )), [collapsed]);
 
-    return (
+  return (
         <div
-            data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+          data-testid="sidebar"
+          className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
             <Button
-                data-testid="sidebar-toggle"
-                onClick={onToggle}
-                className={cls.collapseBtn}
-                theme={ButtonTheme.BACKGROUND_INVERTED}
-                size={ButtonSize.L}
-                square
+              data-testid="sidebar-toggle"
+              onClick={onToggle}
+              className={cls.collapseBtn}
+              theme={ButtonTheme.BACKGROUND_INVERTED}
+              size={ButtonSize.L}
+              square
             >
                 {collapsed ? '>' : '<'}
             </Button>
@@ -49,10 +49,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher
-                    short={collapsed}
-                    className={cls.lang}
+                  short={collapsed}
+                  className={cls.lang}
                 />
             </div>
         </div>
-    );
+  );
 });

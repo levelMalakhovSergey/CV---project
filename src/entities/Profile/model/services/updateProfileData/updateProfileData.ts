@@ -9,19 +9,19 @@ export const updateProfileData = createAsyncThunk<
     void,
     ThunkConfig<string>
     >(
-        'profile/updateProfileData',
-        async (_, thunkApi) => {
-            const { extra, rejectWithValue, getState } = thunkApi;
+      'profile/updateProfileData',
+      async (_, thunkApi) => {
+        const { extra, rejectWithValue, getState } = thunkApi;
 
-            const formData = getProfileForm(getState());
+        const formData = getProfileForm(getState());
 
-            try {
-                const response = await extra.api.put<Profile>('/profile', formData);
+        try {
+          const response = await extra.api.put<Profile>('/profile', formData);
 
-                return response.data;
-            } catch (e) {
-                console.log(e);
-                return rejectWithValue('error');
-            }
-        },
+          return response.data;
+        } catch (e) {
+          console.log(e);
+          return rejectWithValue('error');
+        }
+      },
     );

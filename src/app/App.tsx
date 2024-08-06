@@ -8,14 +8,14 @@ import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
 
 function App() {
-    const { theme } = useTheme();
-    const dispatch = useDispatch();
+  const { theme } = useTheme();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(userActions.initAuthData());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(userActions.initAuthData());
+  }, [dispatch]);
 
-    return (
+  return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
@@ -25,7 +25,7 @@ function App() {
                 </div>
             </Suspense>
         </div>
-    );
+  );
 }
 
 export default App;
