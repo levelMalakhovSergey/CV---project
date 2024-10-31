@@ -793,12 +793,13 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
       },
       "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg",
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_light_theme"
+        "theme": "app_dark_theme"
       }
     },
     {
@@ -834,9 +835,9 @@
   "profile": [
     {
       "id": "1",
-      "first": "timurasdasd",
+      "first": "фыаыфаыф",
       "lastname": "ulbi",
-      "age": 465,
+      "age": 25,
       "currency": "EUR",
       "country": "Ukraine",
       "city": "Moscow",
@@ -915,6 +916,13 @@
       "rate": 2,
       "feedback": "asdasdasd",
       "id": "xbwnNBF"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 5,
+      "feedback": "фыаыфаыаф",
+      "id": "ftXTMSh"
     }
   ],
   "profile-ratings": [
