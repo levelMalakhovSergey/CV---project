@@ -3,6 +3,9 @@
 ```
 npm install - устанавливаем зависимости
 npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+login admin; password: 123
+login user; password: 123
+login testuser; password: 123
 ```
 
 ---
