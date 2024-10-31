@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { createSelector } from '@reduxjs/toolkit';
 import { getUserAuthData } from '@/entities/User';
 import MainIconDeprecated from '@/shared/assets/icons/main-20-20.svg';
 import AboutIconDeprecated from '@/shared/assets/icons/about-20-20.svg';
@@ -19,8 +19,7 @@ import {
 } from '@/shared/const/router';
 import { toggleFeatures } from '@/shared/lib/features';
 
-export const useSidebarItems = () => {
-    const userData = useSelector(getUserAuthData);
+export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     const sidebarItemsList: SidebarItemType[] = [
         {
             path: getRouteMain(),
@@ -68,4 +67,4 @@ export const useSidebarItems = () => {
     }
 
     return sidebarItemsList;
-};
+});

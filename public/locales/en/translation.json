@@ -47,13 +47,9 @@
     "Редактирование статьи с ID = ": "Edit article with ID = ",
     "Ulbi TV App": "Ulbi TV App",
     "Создать статью": "Create article",
-    "Профиль пользователя": "User profile",
-    "Закрыть": "Close",
+    "Профиль пользователя": "Профиль пользователя",
+    "Закрыть": "Закрыть",
     "{{count}} просмотров_zero": "{{count}} views",
     "{{count}} просмотров_one": "{{count}} view",
-    "{{count}} просмотров_other": "{{count}} views",
-    "Читать далее...": "Read more...",
-    "Админка": "AdminUI",
-    "Настройки": "Settings",
-    "Сортировать по:": "Sort by:"
+    "{{count}} просмотров_other": "{{count}} views"
 }
