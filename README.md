@@ -1,8 +1,8 @@
 ## launch project
 
 ```
-npm install - устанавливаем зависимости
-npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+npm install - install deps
+npm run start:dev or npm run start:dev:vite - server start  + frontend project in dev mode
 login admin; password: 123
 login user; password: 123
 login testuser; password: 123
@@ -57,7 +57,7 @@ documentation i18next - [https://react.i18next.com/](https://react.i18next.com/)
 
 ## Tests
 
-В проекте используются 4 вида тестов:
+Project uses 4 types of tests:
 
 1. Regular unit tests with jest - `npm run test:unit`
 2. Component tests with React Testing Library -`npm run test:unit`
