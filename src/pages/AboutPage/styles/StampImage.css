@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+.stamp-container {
+  position: relative;
+  display: inline-block; /* Чтобы контейнер имел размеры изображения */
+  cursor: pointer;
+}
+
+.base-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stamp-overlay {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(-25deg);
+  opacity: 0;
+  animation: stamp-animation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  pointer-events: none; /* чтобы не перехватывать клики */
+}
+
+.stamp-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: #ff0000; /* Красный цвет штампа */
+  border: 4px solid #ff0000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  white-space: nowrap;
+  
+}
+
+/* Анимация "штампа" */
+@keyframes stamp-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+/* @keyframes stamp-animation-dissapear {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+} */

@@ -14,6 +14,7 @@ import { SidebarItemType } from '../types/sidebar';
 import {
     getRouteAbout,
     getRouteArticles,
+    getRouteCowerLetter,
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
@@ -38,7 +39,16 @@ export const useSidebarItems = () => {
                 off: () => AboutIconDeprecated,
                 on: () => AboutIcon,
             }),
-            text: 'О сайте',
+            text: 'О мне',
+        },
+        {
+            path: getRouteCowerLetter(),
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                off: () => AboutIconDeprecated,
+                on: () => AboutIcon,
+            }),
+            text: 'Сопроводительное письмо',
         },
     ];
 

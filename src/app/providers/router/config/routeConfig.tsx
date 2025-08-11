@@ -20,9 +20,11 @@ import {
     getRouteMain,
     getRouteProfile,
     getRouteSettings,
+    getRouteCowerLetter,
 } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 import { SettingsPage } from '@/pages/SettingsPage';
+import { CowerLetterPage } from '@/pages/CowerLetterPage';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
@@ -36,6 +38,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.ABOUT]: {
         path: getRouteAbout(),
         element: <AboutPage />,
+    },
+    [AppRoutes.COWER_LETTER]: {
+        path: getRouteCowerLetter(),
+        element: <CowerLetterPage />,
     },
     [AppRoutes.PROFILE]: {
         path: getRouteProfile(':id'),
