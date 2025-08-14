@@ -5,7 +5,6 @@ import { getRouteAbout, getRouteCowerLetter } from '@/shared/const/router';
 
 const MainPage = () => {
     const { t } = useTranslation();
-    
     return (
         <Page data-testid="MainPage">
          <div style={{display:'flex',flexDirection:'column', gap:10}}>

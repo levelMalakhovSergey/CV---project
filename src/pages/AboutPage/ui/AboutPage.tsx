@@ -71,9 +71,9 @@ const AboutPage = () => {
 
                         <section className="dossier-section">
                             <h2 className="section-title">[ SKILLS ]</h2>
-                            <p>React/React Native, Redux/Jotai, Typescript/JavaScript, Node.js, Next.js, Cypress/Playwright, C#, C++, Figma/PixelPerfect.</p>
+                            <p>React/React Native, Redux/Jotai, Typescript/JavaScript, Node.js, Next.js, Ant Design, Cypress/Playwright, C#, C++, Figma/PixelPerfect.</p>
                         </section>
-                        
+                        <div className="job-history-section">
                         <section className="dossier-section">
                             <h2 className="section-title">[ WORK EXPERIENCE ]</h2>
                             <div className="job-entry">
@@ -84,7 +84,20 @@ const AboutPage = () => {
                                     <li>Designed and implemented real-time market data visualization, trade monitoring systems, and robust user management interfaces.</li>
                                     <li>Maintained code quality through comprehensive testing strategies using Cypress and Playwright, achieving 90%+ test coverage across critical components.</li>
                                     <li>Worked within an agile team structure, participating in daily stand-ups, sprint planning, and retrospectives while managing feature branches and pull requests through Git.</li>
-                                    <li>Contributed to the React Native mobile application that provided users with seamless cryptocurrency trading capabilities.</li>
+                                </ul>
+                                 <p> <strong>Contributed</strong> to the React Native mobile application that provided users with seamless cryptocurrency trading capabilities.</p>
+                                  <ul>
+                                    <li>Used Redux, Redux Saga, Redux Toolkit</li>
+                                    <li>Implemented Lightweight-charts library to display charts on currency preview tab + contributed in improvement of main chart with dynamic data</li>
+                                     <li>Worked with libraries like react-native-mmkv, lightweight-charts   , react-native-device-info</li>
+                                </ul>
+                            </div>
+                              <div className="job-entry">
+                                <h3>Frilance Projects</h3>
+                                <p>During last year finished few frilance project using HTML CSS Javascript. </p>
+                                 <ul>
+                                    <li>Used best CEO practices</li>
+                                    <li>Developed a custom, static website for a small e-commerce brand, focusing on clean HTML5 and CSS3 to ensure fast load times and a seamless user experience</li>
                                 </ul>
                             </div>
                             <div className="job-entry">
@@ -92,6 +105,7 @@ const AboutPage = () => {
                                 <p>First-line Support Engineer, handling customer support tickets and monitoring alerts for a complex data migration platform. Performed initial technical analysis and troubleshooting, while creating escalation tasks for the development team. Maintained efficient communication between customers and technical teams, ensuring timely resolution of reported issues and high customer satisfaction levels.</p>
                             </div>
                         </section>
+                        </div>
                     </div>
                 </div>
                 
