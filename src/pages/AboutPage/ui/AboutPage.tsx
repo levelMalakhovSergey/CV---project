@@ -1,14 +1,12 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+
 import { Page } from '@/widgets/Page';
 import '../styles/AboutPage.css';
 import photo from '../images/photo_me.jpg'
 import StampImage from './StampImage';
 
 const AboutPage = () => {
-    const { t } = useTranslation();
+   
     return <Page data-testid="AboutPage">
-        {/* {t('О мне')} */}
     
     <div className="dossier-background">
             <div className="dossier-paper">

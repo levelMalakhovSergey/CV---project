@@ -1,0 +1,123 @@
+/* General body and container styles */
+.app-container {
+  background-color: #f7fafc; /* bg-gray-100 */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* p-4 */
+  font-family: sans-serif; /* font-sans */
+}
+
+/* Main cover letter card */
+.cover-letter {
+  background-color: #ffffff; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  padding: 2rem; /* p-8 */
+  max-width: 896px; /* max-w-4xl */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header section */
+.cover-letter-header {
+  margin-bottom: 2.5rem; /* mb-10 */
+  text-align: center;
+}
+
+.cover-letter-header h1 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #2d3748; /* text-gray-800 */
+}
+
+/* Contact information */
+.contact-info {
+  margin-top: 0.75rem; /* mt-3 */
+  color: #4a5568; /* text-gray-600 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem 1.5rem; /* gap-y-2 gap-x-6 */
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #3b82f6; /* hover:text-blue-600 */
+}
+
+.separator {
+  display: none; /* hidden by default */
+}
+
+/* Body content */
+.cover-letter-body {
+  color: #4a5568; /* text-gray-700 */
+  font-size: 1rem; /* text-base */
+  line-height: 1.625; /* leading-relaxed */
+}
+
+.cover-letter-body p {
+  margin-bottom: 1.5rem; /* From space-y-6 */
+}
+.cover-letter-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Footer section */
+.cover-letter-footer {
+  margin-top: 3rem; /* mt-12 */
+  color: #4a5568; /* text-gray-700 */
+}
+
+.cover-letter-footer .signature {
+  margin-top: 1rem; /* mt-4 */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  color: #2d3748; /* text-gray-800 */
+}
+
+/* Responsive styles */
+@media (min-width: 640px) { /* sm breakpoint */
+  .app-container {
+    padding: 1.5rem; /* sm:p-6 */
+  }
+  .cover-letter {
+    padding: 2.5rem; /* sm:p-10 */
+  }
+  .cover-letter-header {
+    text-align: left;
+  }
+  .contact-info {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .separator {
+    display: inline; /* sm:inline */
+  }
+  .cover-letter-header h1 {
+    font-size: 2.25rem; /* sm:text-4xl */
+  }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .cover-letter {
+    padding: 3rem; /* md:p-12 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .app-container {
+    padding: 2rem; /* lg:p-8 */
+  }
+  .contact-info {
+    justify-content: flex-start;
+  }
+}
