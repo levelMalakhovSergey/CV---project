@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/StampImage.css';
+import '../styles/StampImage.scss';
 
 const StampImage = ({ src, alt, stampText = 'HIRED' }:{src: any, alt:string, stampText?:string}) => {
     const [stamped, setStamped] = useState(false);

@@ -1,7 +1,7 @@
 /* eslint-disable no-literal-string */
 
 import { Page } from '@/widgets/Page';
-import '../styles/AboutPage.css';
+import '../styles/AboutPage.scss';
 import photo from '../images/photo_me.jpg'
 import StampImage from './StampImage';
 
@@ -18,7 +18,6 @@ const AboutPage = () => {
                 <div className="dossier-main-content">
                     <div className="left-panel">
                         <div className="photo-container">
-                            {/* <img src={photo} alt="Serhii Malakhov" /> */}
                             <StampImage src={photo} alt='Serhii Malakhov' />
                         </div>
                         <section className="dossier-section">
@@ -32,7 +31,7 @@ const AboutPage = () => {
                         <section className="dossier-section">
                             <h2 className="section-title">[ LANGUAGES ]</h2>
                             <p>English - B1-B2 </p>
-                            <p>Polish - A1 </p>
+                            <p>Polish - B1 </p>
                             <p>Ukrainian - Native </p>
                             <p>Russian - C1 </p>
                         </section>

@@ -1,6 +1,6 @@
 
 import { Page } from '@/widgets/Page';
-import "../styles/CowerLetter.css"
+import "../styles/CowerLetter.scss"
 
 const CoverLetter = () => {
   return (

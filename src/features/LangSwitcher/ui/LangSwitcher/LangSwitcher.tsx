@@ -25,6 +25,7 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
             feature="isAppRedesigned"
             on={
                 <Button onClick={toggle} variant="clear">
+                    {/* i18next-extract-disable-next-line */}
                     {t(short ? 'Короткий язык' : 'Язык')}
                 </Button>
             }
@@ -33,7 +34,7 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
                     className={classNames('', {}, [className])}
                     theme={ButtonTheme.CLEAR}
                     onClick={toggle}
-                >
+                >{/* i18next-extract-disable-next-line */}
                     {t(short ? 'Короткий язык' : 'Язык')}
                 </ButtonDeprecated>
             }
