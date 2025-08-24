@@ -18,15 +18,10 @@ export const AppLogo = memo(({ className, size = 100 }: AppLogoProps) => {
             justify="center"
             className={classNames(cls.appLogoWrapper, {}, [className])}
         >
-            {/* <AppSvg
-                width={size}
-                height={size}
-                color="black"
-                className={cls.appLogo}
-            /> */}
+            
                    <img
                 src={AppLogoGif}
-                alt="App Logo"
+                alt={"App Logo"}
                 width={size}
                 height={size}
                 className={cls.appLogo}

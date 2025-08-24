@@ -1,6 +1,7 @@
 
 import { Page } from '@/widgets/Page';
 import "../styles/CowerLetter.css"
+
 const CoverLetter = () => {
   return (
     <div className="cover-letter">

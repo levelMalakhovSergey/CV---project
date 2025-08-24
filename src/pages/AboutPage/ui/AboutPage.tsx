@@ -1,3 +1,4 @@
+/* eslint-disable no-literal-string */
 
 import { Page } from '@/widgets/Page';
 import '../styles/AboutPage.css';

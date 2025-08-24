@@ -1,5 +1,4 @@
 import { FeatureFlags } from '@/shared/types/featureFlags';
-import { LOCAL_STORAGE_LAST_DESIGN_KEY } from '@/shared/const/localstorage';
 
 const defaultFeatures: FeatureFlags = {
     isAppRedesigned:true
