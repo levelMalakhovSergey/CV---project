@@ -3,14 +3,15 @@
 import { Page } from '@/widgets/Page';
 import '../styles/AboutPage.scss';
 import photo from '../images/photo_me.jpg'
+import oldPaper from '../images/oldPaper3.jpg';
 import StampImage from './StampImage';
 
 const AboutPage = () => {
    
-    return <Page data-testid="AboutPage">
+    return <Page data-testid="AboutPage" >
     
     <div className="dossier-background">
-            <div className="dossier-paper">
+            <div className="dossier-paper" style={{ backgroundImage: `url(${oldPaper})`}}>
                 <header className="dossier-header">
                     <h1 className="classified-stamp">MOST WANTED</h1>
                 </header>
