@@ -23,17 +23,17 @@ import {
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
     const { t } = useTranslation();
-
-    const userInfo = (
-        <>
-            <Avatar
-                size={32}
-                src={article.user.avatar}
-                className={cls.avatar}
-            />
-            <Text bold text={article.user.username} />
-        </>
-    );
+    console.log(article)
+    // const userInfo = (
+    //     <>
+    //         <Avatar
+    //             size={32}
+    //             src={article.img}
+    //             className={cls.avatar}
+    //         />
+    //         <Text bold text={article.user.username} />
+    //     </>
+    // );
     const views = (
         <HStack gap="8">
             <Icon Svg={EyeIcon} />
@@ -58,7 +58,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             >
                 <VStack max gap="16">
                     <HStack gap="8" max>
-                        {userInfo}
+                        {/* {userInfo} */}
                         <Text text={article.createdAt} />
                     </HStack>
                     <Text title={article.title} bold />
@@ -118,7 +118,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                             />
                             {views}
                         </HStack>
-                        <HStack gap="4">{userInfo}</HStack>
+                        {/* <HStack gap="4">{userInfo}</HStack> */}
                     </VStack>
                 </VStack>
             </Card>

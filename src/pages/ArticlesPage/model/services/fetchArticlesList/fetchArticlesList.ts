@@ -10,6 +10,7 @@ import {
     getArticlesPageSort,
     getArticlesPageType,
 } from '../../selectors/articlesPageSelectors';
+import axios from 'axios';
 
 interface FetchArticlesListProps {
     replace?: boolean;
@@ -35,7 +36,7 @@ export const fetchArticlesList = createAsyncThunk<
             search,
             type,
         });
-        const response = await extra.api.get<Article[]>('/articles', {
+        const response = await axios.get<Article[]>('/api/articles', {
             params: {
                 _expand: 'user',
                 _limit: limit,

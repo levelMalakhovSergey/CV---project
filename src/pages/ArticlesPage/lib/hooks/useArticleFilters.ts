@@ -27,7 +27,7 @@ export function useArticleFilters() {
         dispatch(fetchArticlesList({ replace: true }));
     }, [dispatch]);
 
-    const debouncedFetchData = useDebounce(fetchData, 500);
+    const debouncedFetchData = useDebounce(fetchData, 0);
 
     const onChangeView = useCallback(
         (view: ArticleView) => {

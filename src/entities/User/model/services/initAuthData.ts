@@ -6,6 +6,7 @@ import {
     LOCAL_STORAGE_LAST_DESIGN_KEY,
     USER_LOCALSTORAGE_KEY,
 } from '@/shared/const/localstorage';
+import axios from 'axios';
 
 export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
     'user/initAuthData',
@@ -19,16 +20,18 @@ export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
         }
 
         try {
-            const response = await dispatch(
-                getUserDataByIdQuery(userId),
-            ).unwrap();
+            // const response = await dispatch(
+            //     getUserDataByIdQuery(userId),
+            // ).unwrap();
+const response = await axios.get('/api/users');
 
+const result = response.data[0]
             localStorage.setItem(
                 LOCAL_STORAGE_LAST_DESIGN_KEY,
-                response.features?.isAppRedesigned ? 'new' : 'old',
+                'new'
             );
 
-            return response;
+            return result;
         } catch (e) {
             console.log(e);
             return rejectWithValue('');
